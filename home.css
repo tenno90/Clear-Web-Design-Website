@@ -1,0 +1,740 @@
+/* global */
+
+* {
+	padding: 0;
+    margin: 0;
+	font-family: 'Cabin', sans-serif;
+	font-family: 'Dosis', sans-serif;
+    font-family: 'Noto Sans HK', sans-serif;
+}
+
+body{
+    overflow-x:hidden
+}
+
+/*================= 
+contents:
+
+1. navBar.
+2. header.
+3. section
+	3.1. greeting keyframe
+
+4. shortInfo
+5. testimonials
+6. contact/footer
+7. mediaquery 0px.
+8. mediaquery 540px.
+9. mediaquery 801px
+10.mediaquery 1000px.
+11.mediaquery 1584px.
+===================*/
+
+/* ===========================
+section for the navBar 
+..dropdown, animation, links..
+=============================*/
+
+.navBar {
+	background-color: #3B3E45;
+	overflow: hidden;
+	position: fixed;
+    z-index: 2;
+    width:100%;
+	top: 0px;
+}
+.links,
+.navBar a {
+	color: #3CACE0;
+}
+.links {
+	position: relative;
+	padding: 30px;
+	text-align: center;
+}
+.navBar a {
+	font-size: 0.7em;
+	padding: 10px 30px;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+/* not displaying this element until a smaller 
+screen size. */
+#dropDown,
+#button {
+	display: none;
+	font-weight:bolder;
+	padding-bottom:20px;
+}
+.navBar a:hover {
+	background-color: #3CACE066;
+	color: white;
+	border-radius: 1em 4em 1em 4em;
+	-webkit-border-radius: 1em 4em 1em 4em;
+	transition: .2s;
+	font-size:0.8em;
+}
+
+/* ====================
+section for the header 
+=====================*/
+
+.header {
+	background-image: url("clearskies3.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 150px;
+	top: 55px;
+	position: relative;
+	z-index:1;
+	opacity:0.9;
+}
+
+.header h1{
+    text-align: center;
+    margin-top:auto;
+    margin-bottom:auto;
+    position:relative;
+    top:40px;
+    font-size: 2.5em;
+	color:white;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+
+}
+
+
+/* =============================
+section for the the main section
+..headings, paragraphs, quotes.. 
+==============================*/
+
+.section {
+    margin-top:45px;
+	font-weight: bold;
+	color: white;
+}
+
+.greeting {
+	font-size: .8em;
+	z-index:0;
+    padding:10%;
+    color: #3CACE0;
+    text-align: center;
+    animation-name:greeting;
+    animation-duration:2s;
+    animation-timing-function: ease;
+}
+/* greeting keyframe */
+@keyframes greeting{
+	0%{
+	transform: translateY(-20px); 	
+	opacity:0;
+	}
+
+	100%{
+	transform: translateY(0); 
+	opacity:1;	
+}
+    }
+
+.paragraph1{
+    text-align: center;
+	padding: 8%;
+	background-color: #3CACE0;
+    color: white;
+	box-shadow: 0px 0px 15px 0px black;
+}
+
+.quote1{
+    padding: 7%;
+    color: #3CACE0;
+}
+
+.paragraph2{
+    text-align: center;
+	padding: 8%;
+	background-color: #3CACE0;
+	box-shadow: 0px 0px 20px 0px black;
+}
+
+.quote2{
+    padding: 7%;
+	color: #3CACE0;
+    text-align: right;
+    position:relative;
+}
+
+.paragraph3{
+	padding: 8%;
+	box-shadow: 0px 0px 20px 0px black;
+	background-color: #3CACE0;
+    text-align: center;
+}
+
+.quote3{
+    padding: 7%;
+    color: #3CACE0;
+}
+
+.paragraph4{
+    text-align: center;
+	padding: 8%;
+	background-color: #3CACE0;
+	box-shadow: 0px 0px 20px 0px black;
+
+}
+   
+.section h2 {
+	font-size: 1.4em;
+}
+.section h2:before{
+	content:open-quote;
+}
+.section h2:after{
+	content:close-quote;
+}
+.section p {
+    font-size: 0.8em;
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ====================
+section for the shortInfo 
+..text overlapping imgs..
+========================*/
+/* grid is in the media query */
+
+.shortInfo {
+	color: #3CACE0;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.shortInfo h3 {
+	font-size: 1em;
+	border: 2px solid #3CACE0;
+	width:50%;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius:30px;
+	-o-border-raidus:30px;
+	padding:10px;
+	margin-bottom:20px;
+}
+
+.shortInfo i {
+	color: #3B3E4599;
+    font-size: 300%;
+    opacity: 30%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.textOverlap a {
+	text-decoration: none;
+	transition: 0.2s;
+	color: #3CACE0;
+}
+.textOverlap a:hover {
+	transition:0.2s;
+	font-size: 1.1em;
+}
+.textOverlap{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.p1 p,
+.p2 p,
+.p3 p,
+.p4 p,
+.p1 i,
+.p2 i,
+.p3 i,
+.p4 i{
+	position: relative;
+}
+
+.p1 p,
+.p2 p,
+.p3 p,
+.p4 p {
+	bottom: 60px;
+    font-weight: bold;
+    font-size: .8em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.p2 i {
+	top: 20px;
+}
+
+.p3 i,
+.p4 i {
+	top: 20px;
+}
+
+/* ==========================
+section for the testimonials 
+..layout, quote icons..
+==============================*/
+
+.testimonial {
+    color: white;
+	background-color: #3CACE0;
+    box-shadow: 0px 0px 20px 0px black;
+    text-align: center;
+    position:relative;
+    padding:30px;
+}
+
+.testsection{
+    text-align: center;
+    font-weight: bold;
+    padding:40px;
+    font-size: .8em;
+}
+
+.testimonialName{
+    font-style: italic;
+	font-weight: normal;
+}
+
+.testimonial h3 {
+	font-weight: bolder;
+    font-size: 1.5em;
+}
+.testQuote:before{
+    content:open-quote;
+}
+.testQuote:after{
+    content:close-quote;
+}
+
+
+
+/* ===========================
+section for the contact/footer 
+============================*/
+
+.contact {
+    color: #3CACE0;
+    text-align: center;
+    display:block;
+    position: relative;
+    margin-top:50px;
+    margin-bottom: 50px;
+    font-weight:bold;
+}
+
+.contactInfo {
+    text-align: center;
+    padding:20px;
+}
+
+.contact i {
+	color: #3B3E45;
+	font-size: 175%;
+	opacity: 40%;
+}
+
+.contact p {
+	font-size: .8em
+}
+
+/* ===============================
+section for the media query 0px 
+..mobile layout..
+=================================*/
+
+@media screen and (min-width: 0px) and (max-width: 422px) {
+	
+	.navButton,
+	#button {
+		position: relative;
+    }
+    
+	#dropDown,
+	.links {
+		display: none;
+    }
+    
+	.navButton {
+		margin: 10px;
+		left: 30px;
+    }
+    
+	#button {
+		display: contents;
+    }
+    
+	#dropDown {
+		overflow: hidden;
+		transition: 1s;
+    }
+    
+	.fa-bars {
+		background-color: #3CACE0;
+		color: white;
+		font-size: 2em;
+		padding: 5px 15px;
+		border-radius: 1em 1em 4em 4em;
+		-webkit-border-radius: 1em 1em 4em 4em;
+    }
+    
+	#dropDown li {
+		padding: 12px;
+		list-style-type: none;
+    }
+}
+
+/* ===============================
+section for the media query 540px 
+..tablet layout..
+=================================*/
+
+@media screen and (min-width: 423px) and (max-width: 800px) {
+	
+	.navButton,
+	#button {
+		position: relative;
+	}
+	#dropDown,
+	.links {
+		display: none;
+	}
+	.navButton {
+		margin: 25px;
+        left: 30px;
+        width:50px;
+	}
+	#button {
+		display: contents;
+	}
+	#dropDown {
+		overflow: hidden;
+		transition: 1s;
+	}
+	.fa-bars {
+		background-color: #3CACE0;
+		color: white;
+		font-size: 2.5em;
+		padding: 10px 20px;
+		border-radius: 1em 1em 4em 4em;
+		-webkit-border-radius: 1em 1em 4em 4em;
+	}
+	#dropDown li {
+		padding: 12px;
+		list-style-type: none;
+		font-size: 1.2em;
+    }
+    
+    .header {
+		position: relative;
+		top: 100px;
+    }
+    
+	.greeting {
+        position: relative;
+        top:20px;
+    }
+
+    .section p {
+        width:80%;
+        margin-right:auto;
+        margin-left:auto;
+    }
+
+    .textOverlap{
+        width:50%;
+    }
+
+    .testimonial p{
+        width:60%;
+        margin-right:auto;
+        margin-left:auto;
+    }
+	
+}
+
+/* ===============================
+section for the media query 801px 
+..tablet to small screen..
+=================================*/
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+	.navButton,
+	#button {
+		position: relative;
+    }
+    
+	#button {
+		display: none;
+    }
+    
+	.links {
+		font-weight: bold;
+    }
+    
+	
+	.header {
+		position: relative;
+		top: 80px;
+    }
+
+    .greeting {
+        position: relative;
+        margin-top:-30px;
+        top:20px;
+    }
+
+    .section p{
+        width:70%;
+    }
+
+    .textOverlap{
+        width:50%;
+    }
+
+    .testimonial p{
+        width:60%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .contact{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+
+}
+
+/* ===============================
+section for the media query 1000px 
+..laptop layout..
+=================================*/
+
+@media screen and (min-width: 1000px) and (max-width: 1584px) {
+	#button {
+		display: none;
+	}
+	.links {
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+	.header {
+		position: relative;
+		top: 90px;
+	}
+	.greeting {
+		position: relative;
+		top: 10px;
+		font-size: 1.4em;
+    }
+    
+    .section p{
+        font-size: 1.1em;
+        width:65%;
+    }
+
+    .quote1 h2{
+        position:relative;
+        left:70px;
+        width:50%;
+    }
+
+    .quote2 h2{
+        position:relative;
+        right:70px;
+    }
+
+    .quote3 h2{
+        position:relative;
+        left:70px;
+        width:50%;
+    }
+
+    .textOverlap{
+        width:40%;
+    }
+
+    .shortInfo p{
+        font-size: 1em;
+    }
+
+    .shortInfo h3{
+        font-size: 1.3em;
+    }
+
+    .shortInfo i {
+      font-size: 400%;
+    }
+
+    .p2 i {
+        top: 25px;
+    }
+    
+    .p3 i,
+    .p4 i {
+        top: 40px;
+    }
+    
+    .testsection{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left:auto;
+        margin-right:auto;
+        width:60%;
+    }
+
+    .testimonial p{
+        font-size: 1.2em;
+    }
+
+    .contact{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+}
+
+/* ===============================
+section for the media query 1584px 
+..desktop layout..
+=================================*/
+
+@media screen and (min-width: 1584px) and (max-width: 20000px) {
+	#button {
+		display: none;
+	}
+	.links {
+		font-weight: bold;
+		font-size: 1.4em;
+	}
+	.header {
+		position: relative;
+        padding:50px;
+        font-size:1.5em;
+	}
+    
+    .greeting {
+		position: relative;
+        font-size: 1.5em;
+        margin:-130px;
+    }
+    
+    .section p{
+        font-size: 1.3em;
+        width:60%;
+        margin:-50px;
+        margin-left:auto;
+        margin-right:auto;
+
+    }
+
+    .section h2{
+        margin-bottom:-50px;
+        margin-top:-30px;
+    }
+
+    .quote1 h2{
+        position:relative;
+        left:10%;
+        width:50%;
+        font-size:1.7em;
+    }
+
+    .quote2 h2{
+        position:relative;
+        right:20%;
+        font-size:1.7em;
+    }
+
+    .quote3 h2{
+        position:relative;
+        left:10%;
+        width:50%;
+        font-size:1.7em;
+    }
+
+    .textOverlap{
+        width:30%;
+    }
+
+    .shortInfo p{
+        font-size: 1.2em;
+    }
+
+    .shortInfo h3{
+        font-size: 1.5em;
+        width:30%;
+    }
+
+    .shortInfo i {
+      font-size: 400%;
+    }
+
+    .p2 i {
+        top: 25px;
+    }
+    
+    .p3 i,
+    .p4 i {
+        top: 40px;
+    }
+
+    .p1,.p2,.p3,.p4{
+        margin:5%;
+    }
+
+    .testimonial{
+        padding:5%;
+    }
+    
+    .testsection{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left:auto;
+        margin-right:auto;
+        width:70%;
+    }
+
+    .testimonial h3{
+        font-size:1.5em;
+    }
+
+    .testimonial p{
+        font-size: 1.3em;
+    }
+
+    .contact{
+        display:grid;
+        grid-template-columns:25% 25% 25% 25%;
+        grid-template-rows: 100%;
+        position:relative;
+        align-items: center;
+        width:100%;
+        }
+
+    .contactInfo{
+        width:60%;
+        text-align: center;
+        border-radius:20px;
+        position:relative;
+        left:20%;
+        
+        }
+
+}

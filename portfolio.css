@@ -1,0 +1,500 @@
+/* global */
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Cabin', sans-serif;
+	font-family: 'Dosis', sans-serif;
+	font-family: 'Noto Sans HK', sans-serif;
+}
+
+body{
+    background-color: #3CACE0;
+}
+
+.grid {
+	display: grid;
+}
+
+/* ===========================
+section for the navBar 
+..dropdown, animation, links..
+=============================*/
+
+.navBar {
+	background-color: #3B3E45;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	top: 0px;
+}
+.links,
+.navBar a {
+	color: #3CACE0;
+}
+.links {
+	position: relative;
+	padding: 30px;
+	text-align: center;
+}
+.navBar a {
+	font-size: 0.7em;
+	padding: 10px 30px;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+/* not displaying this element until a smaller 
+screen size. */
+#dropDown,
+#button {
+	display: none;
+	font-weight:bolder;
+	padding-bottom:40px;
+}
+.navBar a:hover {
+	background-color: #3CACE066;
+	color: white;
+	border-radius: 1em 4em 1em 4em;
+	-webkit-border-radius: 1em 4em 1em 4em;
+	transition: .2s;
+	font-size:0.8em;
+}
+
+/* ====================
+section for the header 
+=====================*/
+
+.header {
+	background-image: url("clearskies3.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 200px;
+	top: 55px;
+	position: relative;
+}
+
+.header h1{
+    text-align: center;
+    margin-top:auto;
+    margin-bottom:auto;
+    position:relative;
+    top:40px;
+    font-size: 4em;
+	color:white;
+	text-transform: uppercase;
+	animation-name: title;
+    animation-duration: 4s;
+}
+
+@keyframes title{
+
+	0%{
+    opacity:0;
+    }
+
+    50%{
+    opacity:0;
+    }
+    
+	100%{
+    opacity:1;
+    }
+
+}
+
+/*===================== 
+section for the section 
+=====================*/
+
+.section{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.section p{
+    text-align: center;
+}
+
+.appear1{
+    position:relative;
+animation-name:appear1;
+animation-duration: 1s;
+animation-fill-mode: forwards;
+}
+
+@keyframes appear1{
+0%{
+opacity: 0;
+top:500px;
+}
+
+50%{
+opacity:0;
+}
+
+100%{
+opacity:1;
+top:0;
+}
+}
+
+.appear2{
+position:relative;
+animation-name:appear2;
+animation-duration: 1.5s;
+}
+
+@keyframes appear2{
+0%{
+opacity: 0;
+top:500px;
+}
+50%{
+opacity:0;
+}
+100%{
+opacity:1;
+top:0;
+}
+}
+
+.appear3{
+position:relative;
+animation-name:appear3;
+animation-duration: 2s;
+}
+    
+@keyframes appear3{
+0%{
+opacity: 0;
+top:500px;
+}
+50%{
+opacity:0;
+}
+100%{
+opacity:1;
+top:0;
+}
+}
+
+.appear4{
+position:relative;
+animation-name:appear4;
+animation-duration: 2.5s;
+}
+        
+@keyframes appear4{
+0%{
+opacity: 0;
+top:500px;
+}
+50%{
+opacity:0;
+}
+100%{
+opacity:1;
+top:0;
+}
+}
+
+.appear5{
+position:relative;
+animation-name:appear3;
+animation-duration: 3s;
+}
+            
+@keyframes appear5{
+0%{
+top:500px;
+opacity: 0;
+}
+50%{
+opacity:0;
+}
+100%{
+opacity:1;
+top:0;
+}
+}
+
+.appear6{
+position:relative;
+animation-name:appear6;
+animation-duration: 3.5s;
+}
+                
+@keyframes appear6{
+0%{
+top:500px;
+opacity: 0;
+}
+50%{
+opacity:0;
+}
+100%{
+opacity:1;
+top:0;
+}
+}
+
+
+
+/* ===============================
+section for the media query 0px 
+..mobile layout..
+=================================*/
+
+@media screen and (min-width: 0px) and (max-width: 539px) {
+	/* *{
+-webkit-transition: none !important;
+-moz-transition: none !important;
+-o-transition: none !important;
+-ms-transition: none !important;
+transition: none !important;
+	} */
+	
+	.navButton,
+	#button {
+		position: relative;
+	}
+	#dropDown,
+	.links {
+		display: none;
+	}
+	.navButton {
+		margin: 10px;
+		left: 30px;
+	}
+	#button {
+		display: contents;
+	}
+	#dropDown {
+		overflow: hidden;
+		transition: 1s;
+	}
+	.fa-bars {
+		background-color: #3CACE0;
+		color: white;
+		font-size: 2em;
+		padding: 5px 15px;
+		border-radius: 1em 1em 4em 4em;
+		-webkit-border-radius: 1em 1em 4em 4em;
+	}
+	#dropDown li {
+		padding: 12px;
+		list-style-type: none;
+    }
+
+    .header{
+        font-size: .8em;
+    }
+
+    .section{
+        margin-top: 70px;
+    }
+
+    .section{
+        grid-gap:10px;
+        padding:10px;
+        /* grid-template-columns: 1fr;
+        grid-template-rows: 1fr; */
+    }
+
+    .section p{
+        padding:20px;
+    }
+	
+}
+
+/* ===============================
+section for the media query 540px 
+..tablet layout..
+=================================*/
+
+@media screen and (min-width: 540px) and (max-width: 800px) {
+
+	.navButton,
+	#button {
+		position: relative;
+	}
+	#dropDown,
+	.links {
+		display: none;
+	}
+	.navButton {
+		margin: 30px;
+		left: 40px;
+	}
+	#button {
+		display: contents;
+	}
+	#dropDown {
+		overflow: hidden;
+		transition: 1s;
+	}
+	.fa-bars {
+		background-color: #3CACE0;
+		color: white;
+		font-size: 2.5em;
+		padding: 10px 20px;
+		border-radius: 1em 1em 4em 4em;
+		-webkit-border-radius: 1em 1em 4em 4em;
+	}
+	#dropDown li {
+		padding: 12px;
+		list-style-type: none;
+		font-size: 1.2em;
+	}
+	
+	.header {
+		position: relative;
+        top: 100px;
+        font-size:0.8;
+	}
+
+	.section{
+        margin-top: 120px;
+        grid-gap:20px;
+        padding:20px;
+    }
+
+    .section p{
+        padding:20px;
+    }
+}
+
+/* ===============================
+section for the media query 801px 
+..tablet to small screen..
+=================================*/
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+	
+	.navButton,
+	#button {
+		position: relative;
+	}
+	#button {
+		display: none;
+	}
+	.links {
+		font-weight: bold;
+	}
+	.header {
+		position: relative;
+		top: 80px;
+	}
+
+	.section{
+        margin-top: 100px;
+        grid-gap:30px;
+        padding:30px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr ;
+    }
+
+
+    .section p{
+        padding:30px;
+    }
+	
+}
+
+/* ===============================
+section for the media query 1000px 
+..laptop layout..
+=================================*/
+
+@media screen and (min-width: 1000px) and (max-width: 1584px) {
+	#button {
+		display: none;
+	}
+	.links {
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+	.header {
+		position: relative;
+		top: 90px;
+	}
+
+	h2{
+		font-size: 2em;
+	}
+
+	.para{
+		max-width:75%;
+		align-content: center;
+		margin:auto;
+		font-size: 1.3em;
+    }
+
+    .section{
+        margin-top: 110px;
+        grid-gap:30px;
+        padding:30px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr ;
+    }
+
+
+    .section p{
+        padding:30px;
+    }
+}
+
+/* ===============================
+section for the media query 1584px 
+..desktop layout..
+=================================*/
+
+@media screen and (min-width: 1584px) and (max-width: 20000px) {
+	#button {
+		display: none;
+	}
+	.links {
+		font-weight: bold;
+		font-size: 1.4em;
+	}
+	.header {
+		position: relative;
+		top: 90px;
+	}
+
+	h2{
+		font-size: 2.5em;
+	}
+
+	.para{
+		max-width:80%;
+		margin:auto;
+		font-size: 1.5em;
+
+
+    }
+
+    .section{
+        margin-top: 110px;
+        grid-gap:30px;
+        padding:30px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+
+    .section p{
+        padding:30px;
+    }
+
+
+	
+}

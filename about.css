@@ -1,0 +1,340 @@
+/* global */
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Cabin', sans-serif;
+	font-family: 'Dosis', sans-serif;
+	font-family: 'Noto Sans HK', sans-serif;
+}
+
+/*=================
+contents
+
+1. navBar.
+2. header.
+3. section.
+4. mediaquery 0px.
+5. mediaquery 540px.
+6. mediaquery 801px
+7.mediaquery 1000px.
+8.mediaquery 1584px.
+==================*/
+
+.grid {
+	display: grid;
+}
+
+/* ===========================
+section for the navBar 
+..dropdown, animation, links..
+=============================*/
+
+.navBar {
+	background-color: #3B3E45;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	top: 0px;
+}
+.links,
+.navBar a {
+	color: #3CACE0;
+}
+.links {
+	position: relative;
+	padding: 30px;
+	text-align: center;
+}
+.navBar a {
+	font-size: 0.7em;
+	padding: 10px 30px;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+/* not displaying this element until a smaller 
+screen size. */
+#dropDown,
+#button {
+	display: none;
+	font-weight:bolder;
+	padding-bottom:40px;
+}
+.navBar a:hover {
+	background-color: #3CACE066;
+	color: white;
+	border-radius: 1em 4em 1em 4em;
+	-webkit-border-radius: 1em 4em 1em 4em;
+	transition: .2s;
+	font-size:0.8em;
+}
+
+/* ====================
+section for the header 
+=====================*/
+
+.header {
+	background-image: url("clearskies3.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 200px;
+	top: 55px;
+	position: relative;
+}
+
+.header h1{
+    text-align: center;
+    margin-top:auto;
+    margin-bottom:auto;
+    position:relative;
+    top:50px;
+    font-size: 3em;
+	color:white;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+}
+
+/* =============================
+section for the the main section
+..headings, paragraphs.. 
+==============================*/
+
+.section, .section p{
+	position: relative;
+}
+
+.section {
+	padding:20%;
+	font-weight: bold;
+	color: #3CACE0;
+	text-align: center;
+	top:40px;
+	margin:auto;
+}
+
+.section p {
+    font-size: 0.8em;
+}
+
+.section h2{
+	font-size: 1.5em;
+	font-style: oblique;
+	margin-bottom:50px;
+}
+
+/* ===============================
+section for the media query 0px 
+..mobile layout..
+=================================*/
+
+@media screen and (min-width: 0px) and (max-width: 539px) {
+	
+	.navButton,
+	#button {
+		position: relative;
+	}
+	#dropDown,
+	.links {
+		display: none;
+	}
+	.navButton {
+		margin: 10px;
+		left: 30px;
+	}
+	#button {
+		display: contents;
+	}
+	#dropDown {
+		overflow: hidden;
+		transition: 1s;
+	}
+	.fa-bars {
+		background-color: #3CACE0;
+		color: white;
+		font-size: 2em;
+		padding: 5px 15px;
+		border-radius: 1em 1em 4em 4em;
+		-webkit-border-radius: 1em 1em 4em 4em;
+	}
+	#dropDown li {
+		padding: 12px;
+		list-style-type: none;
+	}
+	
+}
+
+/* ===============================
+section for the media query 540px 
+..tablet layout..
+=================================*/
+
+@media screen and (min-width: 540px) and (max-width: 800px) {
+	/* *{
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+        } */
+	.navButton,
+	#button {
+		position: relative;
+	}
+	#dropDown,
+	.links {
+		display: none;
+	}
+	.navButton {
+		margin: 30px;
+		left: 40px;
+	}
+	#button {
+		display: contents;
+	}
+	#dropDown {
+		overflow: hidden;
+		transition: 1s;
+	}
+	.fa-bars {
+		background-color: #3CACE0;
+		color: white;
+		font-size: 2.5em;
+		padding: 10px 20px;
+		border-radius: 1em 1em 4em 4em;
+		-webkit-border-radius: 1em 1em 4em 4em;
+	}
+	#dropDown li {
+		padding: 12px;
+		list-style-type: none;
+		font-size: 1.2em;
+	}
+	
+	.header {
+		position: relative;
+		top: 110px;
+	}
+
+	.section{
+	width:50%;	}
+	}
+
+/* ===============================
+section for the media query 801px 
+..tablet to small screen..
+=================================*/
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+	/* *{
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+            } */
+	.navButton,
+	#button {
+		position: relative;
+	}
+	#button {
+		display: none;
+	}
+	.links {
+		font-weight: bold;
+	}
+	.header {
+		position: relative;
+		top: 80px;
+	}
+
+	.header h1{
+		font-size: 3em;
+		position:relative;
+		top:60px;
+	}
+
+	.section{
+		width:50%;
+		margin:auto;
+		align-content: center;
+		margin-top:-70px;
+	}
+
+	.para{
+		margin-bottom:-100px;
+	}
+	
+}
+
+/* ===============================
+section for the media query 1000px 
+..laptop layout..
+=================================*/
+
+@media screen and (min-width: 1000px) and (max-width: 1584px) {
+	#button {
+		display: none;
+	}
+	.links {
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+	.header {
+		position: relative;
+		top: 90px;
+	}
+
+	.header h2{
+		font-size: 2em;
+	}
+
+	.section{
+	width:50%;
+	}
+
+	.section h2{
+		font-size: 2em;
+		margin-top:-70px;
+	}
+
+	.section p{
+		font-size: 1.2em;
+		margin-bottom:50px;
+	}
+}
+
+/* ===============================
+section for the media query 1584px 
+..desktop layout..
+=================================*/
+
+@media screen and (min-width: 1584px) and (max-width: 20000px) {
+	#button {
+		display: none;
+	}
+	.links {
+		font-weight: bold;
+		font-size: 1.4em;
+	}
+	.header {
+		position: relative;
+		top: 90px;
+	}
+
+	.section{
+		width:50%;
+	}
+
+	.section h2{
+		font-size: 2.3em;
+		margin-top:-200px;
+	}
+
+	.section p{
+		font-size: 1.5em;
+		margin:50px;
+	}
+	
+}
+

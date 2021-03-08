@@ -1,0 +1,583 @@
+/*=================
+contents
+
+1. navBar.
+2. header.
+3. form.
+4.contact.
+5. mediaquery 0px.
+6. mediaquery 540px.
+7. mediaquery 801px
+8.mediaquery 1000px.
+9.mediaquery 1584px.
+==================*/
+
+/* global */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing:border-box;
+	font-family: 'Cabin', sans-serif;
+	font-family: 'Dosis', sans-serif;
+	font-family: 'Noto Sans HK', sans-serif;
+}
+body{
+	background-color: white;
+}
+
+/* ===========================
+section for the navBar 
+..dropdown, animation, links..
+=============================*/
+
+.navBar {
+	background-color: #3B3E45;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	top: 0px;
+}
+.links,
+.navBar a {
+	color: #3CACE0;
+}
+.links {
+	position: relative;
+	padding: 30px;
+	text-align: center;
+}
+.navBar a {
+	font-size: 0.7em;
+	padding: 10px 30px;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+/* not displaying this element until a smaller 
+screen size. */
+#dropDown,
+#button {
+	display: none;
+	font-weight:bolder;
+	padding-bottom:40px;
+}
+.navBar a:hover {
+	background-color: #3CACE066;
+	color: white;
+	border-radius: 1em 4em 1em 4em;
+	-webkit-border-radius: 1em 4em 1em 4em;
+	transition: .2s;
+	font-size:0.8em;
+}
+
+/* ====================
+section for the header 
+=====================*/
+
+.header {
+	background-image: url("clearskies3.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 200px;
+	top: 55px;
+	position: relative;
+}
+
+.header h1{
+    text-align: center;
+    margin-top:auto;
+    margin-bottom:auto;
+    position:relative;
+    top:40px;
+    font-size: 2.5em;
+	color:white;
+	text-transform: uppercase;
+}
+
+/* =============================
+section for the the forms.
+==============================*/
+
+.formText{
+	color:white;
+	font-weight:bold;
+	margin-bottom:50px;
+	border: 2px solid white;
+	border-radius: 8px;
+	padding:20px;
+	letter-spacing: 1px;
+	}
+
+
+
+.form{
+	background-color: #3CACE0;
+	position:relative;
+	top:55px;
+	width:100%;
+	height:100%;
+	text-align: center;
+	padding:30px;
+	box-shadow: 0px 0px 20px 0px black ;
+	margin-bottom: 15px;
+	}
+.text{
+	color:white;
+	font-size: 1.1em;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.formGroup{
+	width:100%;
+	margin-top:20px;
+}
+.formGroup input, 
+.formGroup textarea{
+	width:100%;
+	padding:5px;
+	border: 1px solid  #3CACE0;
+	margin-top:5px;
+	border-radius: 8px;
+}
+textarea{
+	resize:vertical;
+}
+button[type="submit"]{
+	width:100%;
+	border:none;
+	outline:none;
+	padding:10px;
+	border-radius:8px;
+	background-color: whitesmoke;
+	margin-top:20px;
+	color: #3CACE0;
+	font-size: .8em;
+	font-weight: bold;
+	cursor: pointer;
+	transition:0.4s ease;
+}
+
+button[type="submit"]:hover{
+	transition:0.4s;
+	background-color: lightcyan;
+	
+}
+
+/* --------------------------
+seection for the contact info
+---------------------------*/
+
+.contact {
+	color: #3CACE0;
+	top:50px;
+	position:relative;
+	display:grid;
+	grid-template-columns: 1fr;
+	grid-template-rows:1fr ;
+	grid-gap:20px;
+	text-align: center;
+	padding:30px;
+}
+.contact i {
+	color: #3CACE0;
+	font-size: 2em;
+}
+.contact p {
+	font-size: 1em;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.contactInfo {
+	display: inline-block;
+	padding:10px;
+}
+
+/* #appear1{
+background-color: lightpink;
+position: relative;
+animation-name:appear1;
+animation-duration:2s;
+}
+@keyframes appear1{
+	0%{
+		opacity:0;
+		top:500px;
+	}
+	
+	50%{
+		opacity:0;
+	}
+
+	100%{
+		opacity:1;
+	}
+} */
+
+#appear1{
+	animation-name:appear2;
+	animation-duration:1s;
+	}
+@keyframes appear2{
+	0%{}
+	100%{}
+}
+
+#appear1{
+	animation-name:appear3;
+	animation-duration:1s;
+}
+@keyframes appear3{
+	0%{}
+	100%{}
+}
+
+#appear1{
+	animation-name:appear4;
+	animation-duration:1s;
+}
+@keyframes appear4{
+	0%{}
+	100%{}
+}
+
+/* ===============================
+section for the media query 0px 
+..mobile layout..
+=================================*/
+
+@media screen and (min-width: 0px) and (max-width: 539px) {
+	.navButton,
+	#button {
+		position: relative;
+	}
+	#dropDown,
+	.links {
+		display: none;
+	}
+	.navButton {
+		margin: 20px;
+		left: 30px;
+	}
+	#button {
+		display: contents;
+	}
+	#dropDown {
+		overflow: hidden;
+		transition: 1s;
+	}
+	.fa-bars {
+		background-color: #3CACE0;
+		color: white;
+		font-size: 2em;
+		padding: 5px 15px;
+		border-radius: 1em 1em 4em 4em;
+		-webkit-border-radius: 1em 1em 4em 4em;
+	}
+	#dropDown li {
+		padding: 12px;
+		list-style-type: none;
+	}
+	.header h1{
+	top:70px;
+	font-size: 2.4em;
+	letter-spacing: 15px;
+	}
+	
+}
+
+/* ===============================
+section for the media query 540px 
+..tablet layout..
+=================================*/
+
+@media screen and (min-width: 540px) and (max-width: 800px) {
+	.navButton,
+	#button {
+		position: relative;
+	}
+	#dropDown,
+	.links {
+		display: none;
+	}
+	.navButton {
+		margin: 25px;
+		left: 40px;
+	}
+	#button {
+		display: contents;
+	}
+	#dropDown {
+		overflow: hidden;
+		transition: 1s;
+	}
+	.fa-bars {
+		background-color: #3CACE0;
+		color: white;
+		font-size: 2.5em;
+		padding: 10px 20px;
+		border-radius: 1em 1em 4em 4em;
+		-webkit-border-radius: 1em 1em 4em 4em;
+	}
+	#dropDown li {
+		padding: 12px;
+		list-style-type: none;
+		font-size: 1.2em;
+	}
+	.header {
+		position: relative;
+		top: 100px;
+	}
+	.header h1{
+		font-size: 2.5em;
+		letter-spacing: 15px;
+	}
+	.formText{
+		width:400px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.formGroup,
+	button[type="submit"]{
+		width:90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+/* ===============================
+section for the media query 801px 
+..tablet to small screen..
+=================================*/
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+	.navButton,
+	#button {
+		position: relative;
+	}
+	#button {
+		display: none;
+	}
+	.links {
+		font-weight: bold;
+		font-size: 1.1em;
+	}
+	.header {
+		position: relative;
+		top: 80px;
+	}
+	.header h1{
+		font-size: 3.2em;
+		letter-spacing: 15px;
+	}
+	.contact {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows:1fr ;
+		grid-gap:10px;
+	}
+
+	.formText{
+		width:400px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.formGroup,
+	button[type="submit"]{
+		width:90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/* ===============================
+section for the media query 1000px 
+..laptop layout..
+=================================*/
+
+@media screen and (min-width: 1000px) and (max-width: 1584px) {
+	#button {
+		display: none;
+	}
+	.links {
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+	.header {
+		position: relative;
+		top: 90px;
+	}
+	.header h1{
+		font-size: 3.2em;
+		letter-spacing: 15px;
+	}
+
+	.form{
+		display:grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+	}
+	
+	.formText{
+		width:400px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	.formGroup,
+	button[type="submit"]{
+		width:90%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	.contact {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows:1fr ;
+		grid-gap:10px;
+	}
+}
+
+/* ===============================
+section for the media query 1584px 
+..desktop layout..
+=================================*/
+
+@media screen and (min-width: 1584px) and (max-width: 20000px) {
+	#button {
+		display: none;
+	}
+	.links {
+		font-weight: bold;
+		font-size: 1.4em;
+	}
+	.header {
+		position: relative;
+		font-size: 1.5em;
+		opacity:0.9;
+	}
+	.header h1{
+		position:relative;
+		top:60px;
+		letter-spacing: 20px;
+	}
+	.contact {
+		display:block;
+	}
+	.form{
+		display:grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+	}
+	
+	.formText{
+		width:400px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	.formGroup,
+	button[type="submit"]{
+		width:70%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	.contact {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows:1fr ;
+		grid-gap:10px;
+	}
+
+	#appear1{
+		position: relative;
+		animation-name:appear1;
+		animation-duration:1s;
+		}
+		@keyframes appear1{
+			0%{
+				top:400px;
+				opacity:0;
+			}
+			
+			50%{
+				opacity:0;
+			}
+		
+			100%{
+				opacity:1;
+				top:0;
+			}
+		}
+
+	#appear2{
+		position: relative;
+		animation-name:appear2;
+		animation-duration:2s;
+		}
+		@keyframes appear2{
+			0%{
+				top:400px;
+				opacity:0;
+			}
+				
+			50%{
+				opacity:0;
+			}
+			
+			100%{
+				opacity:1;
+				top:0;
+			}
+		}
+
+		#appear3{
+			position: relative;
+				animation-name:appear3;
+				animation-duration:3s;
+				}
+				@keyframes appear3{
+					0%{
+						top:400px;
+						opacity:0;
+					}
+					
+					50%{
+						opacity:0;
+					}
+				
+					100%{
+						opacity:1;
+						top:0;
+					}
+				}
+
+				#appear4{
+					position: relative;
+					animation-name:appear4;
+					animation-duration:4s;
+					}
+					@keyframes appear4{
+						0%{
+							top:400px;
+							opacity:0;
+						}
+						
+						50%{
+							opacity:0;
+						}
+					
+						100%{
+							opacity:1;
+							top:0;
+						}
+					}
+}
+

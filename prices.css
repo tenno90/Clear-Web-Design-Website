@@ -1,0 +1,400 @@
+/* global */
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Cabin', sans-serif;
+	font-family: 'Dosis', sans-serif;
+	font-family: 'Noto Sans HK', sans-serif;
+}
+
+.grid {
+	display: grid;
+}
+
+/* ===========================
+section for the navBar 
+..dropdown, animation, links..
+=============================*/
+
+.navBar {
+	background-color: #3B3E45;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	top: 0px;
+}
+.links,
+.navBar a {
+	color: #3CACE0;
+}
+.links {
+	position: relative;
+	padding: 30px;
+	text-align: center;
+}
+.navBar a {
+	font-size: 0.7em;
+	padding: 10px 30px;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+/* not displaying this element until a smaller 
+screen size. */
+#dropDown,
+#button {
+	display: none;
+	font-weight:bolder;
+	padding-bottom:40px;
+}
+.navBar a:hover {
+	background-color: #3CACE066;
+	color: white;
+	border-radius: 1em 4em 1em 4em;
+	-webkit-border-radius: 1em 4em 1em 4em;
+	transition: .2s;
+	font-size:0.8em;
+}
+
+/* ====================
+section for the header 
+=====================*/
+
+.header {
+	background-image: url("clearskies3.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 200px;
+	top: 55px;
+	position: relative;
+}
+
+.header h1{
+    text-align: center;
+    margin-top:auto;
+    margin-bottom:auto;
+    position:relative;
+    top:40px;
+    font-size: 4em;
+	color:white;
+	text-transform: uppercase;
+	animation-name: title;
+	animation-duration: 2s;
+}
+
+@keyframes title{
+	0%{
+	opacity:0
+	}
+	100%{
+	opacity:1;
+	}
+}
+
+/*===================== 
+section for the section 
+=====================*/
+
+.section{
+	text-align: center;
+	font-size: 1.3em;
+}
+
+.list,.section{
+	list-style-type: none;
+
+}
+
+section h1{
+	padding:4%;
+}
+
+.list{
+	line-height: 3em;
+}
+
+.section{
+animation-name: content;
+animation-duration: 4s;
+}
+
+.section1,.section2{
+	padding-bottom: 5%;
+	padding-top:5%;
+	color:#3CACE0;
+
+}
+
+.section2{
+	background-color:#3CACE0 ;
+	color:white;
+	box-shadow:0px 0px 20px 0px black
+}
+
+@keyframes content{
+	0%{
+	opacity:0
+	}
+	100%{
+	opacity:1;
+	}
+}
+
+.section a{
+	text-decoration: none;
+	color:#3CACE0;
+	font-weight:bold;
+}
+
+.section2 a{
+	color:white;
+}
+
+/* ===============================
+section for the media query 0px 
+..mobile layout..
+=================================*/
+
+@media screen and (min-width: 0px) and (max-width: 539px) {
+	/* *{
+-webkit-transition: none !important;
+-moz-transition: none !important;
+-o-transition: none !important;
+-ms-transition: none !important;
+transition: none !important;
+	} */
+	
+	.navButton,
+	#button {
+		position: relative;
+	}
+	#dropDown,
+	.links {
+		display: none;
+	}
+	.navButton {
+		margin: 10px;
+		left: 30px;
+	}
+	#button {
+		display: contents;
+	}
+	#dropDown {
+		overflow: hidden;
+		transition: 1s;
+	}
+	.fa-bars {
+		background-color: #3CACE0;
+		color: white;
+		font-size: 2em;
+		padding: 5px 15px;
+		border-radius: 1em 1em 4em 4em;
+		-webkit-border-radius: 1em 1em 4em 4em;
+	}
+	#dropDown li {
+		padding: 12px;
+		list-style-type: none;
+	}
+	
+	.header{
+		font-size: .8em;
+	}
+
+    .section{
+        margin-top: 70px;
+	}
+	
+	.section1, .section2{
+		font-size: .7em;
+		padding:10%;
+	}
+	
+}
+
+/* ===============================
+section for the media query 540px 
+..tablet layout..
+=================================*/
+
+@media screen and (min-width: 540px) and (max-width: 800px) {
+	/* *{
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+        } */
+	.navButton,
+	#button {
+		position: relative;
+	}
+	#dropDown,
+	.links {
+		display: none;
+	}
+	.navButton {
+		margin: 30px;
+		left: 40px;
+	}
+	#button {
+		display: contents;
+	}
+	#dropDown {
+		overflow: hidden;
+		transition: 1s;
+	}
+	.fa-bars {
+		background-color: #3CACE0;
+		color: white;
+		font-size: 2.5em;
+		padding: 10px 20px;
+		border-radius: 1em 1em 4em 4em;
+		-webkit-border-radius: 1em 1em 4em 4em;
+	}
+	#dropDown li {
+		padding: 12px;
+		list-style-type: none;
+		font-size: 1.2em;
+	}
+	
+	.header {
+		position: relative;
+		top: 100px;
+	}
+
+	.section{
+        margin-top: 120px;
+	}
+
+	.section1 li, .section2 li{
+		font-size:.8em;
+	}
+
+	.section h1{
+		font-size: 1.5em;
+	}
+	
+
+}
+
+/* ===============================
+section for the media query 801px 
+..tablet to small screen..
+=================================*/
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+	/* *{
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+            } */
+	.navButton,
+	#button {
+		position: relative;
+	}
+	#button {
+		display: none;
+	}
+	.links {
+		font-weight: bold;
+	}
+	.header {
+		position: relative;
+		top: 80px;
+	}
+
+	.section{
+		margin-top:70px;
+		font-size:1.2em
+	}
+
+	.section2 h1{
+		padding:30px;
+		font-size:1.7em;
+}
+
+	.section1 h1{
+	padding:50px;
+	font-size:1.7em;
+	}
+
+	
+}
+
+/* ===============================
+section for the media query 1000px 
+..laptop layout..
+=================================*/
+
+@media screen and (min-width: 1000px) and (max-width: 1584px) {
+	#button {
+		display: none;
+	}
+	.links {
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+	.header {
+		position: relative;
+		top: 90px;
+	}
+
+	h2{
+		font-size: 2em;
+	}
+
+	.para{
+		max-width:75%;
+		align-content: center;
+		margin:auto;
+		font-size: 1.3em;
+    }
+    
+    .section{
+        margin-top: 110px;
+	}
+	
+	.section1,.section2{
+	padding:-5%;
+	}
+}
+
+/* ===============================
+section for the media query 1584px 
+..desktop layout..
+=================================*/
+
+@media screen and (min-width: 1584px) and (max-width: 20000px) {
+	#button {
+		display: none;
+	}
+	.links {
+		font-weight: bold;
+		font-size: 1.4em;
+	}
+	.header {
+		position: relative;
+		top: 90px;
+	}
+
+	h2{
+		font-size: 2.5em;
+	}
+
+	.para{
+		max-width:80%;
+		margin:auto;
+		font-size: 1.5em;
+
+
+    }
+    
+    .section{
+        margin-top: 110px;
+    }
+	
+}

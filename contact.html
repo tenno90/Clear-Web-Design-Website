@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/921f309baf.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Dosis&family=Noto+Sans+HK:wght@100&display=swap" rel="stylesheet">
+    <title>Clear Web Design : Contact</title>
+</head>
+
+<body>
+
+		<div class="navBar">
+			<div class="links">
+				<a class="active" href="home.html"> <i class="fas fa-house-user"></i> Home</a> 
+				<a href="about.html"><i class="fas fa-book"></i>  About</a>
+				<a href="prices.html"><i class="fas fa-pound-sign"></i></i> Prices</a>
+				<a href="portfolio.html"><i class="fas fa-brush"></i> Portfolio</a>
+				<a href="photography.html"><i class="fas fa-camera"></i> Photography</a>
+				<a href="contact.html"><i class="fas fa-id-card"></i> Contact</a>
+			</div>
+			<div class="navButton">
+				<button onclick="hide()" id="button"> <i class="fa fa-bars"></i>
+				</button>
+			</div>
+			<div id="dropDown">
+				<ul>
+					<li>
+						<a href="home.html"> <i class="fas fa-house-user"></i> Home</a>
+					</li>
+					<li><a href="about.html"><i class="fas fa-book"></i>  About</a>
+					</li>
+					<li><a href="prices.html"><i class="fas fa-pound-sign"></i></i> Prices</a>
+					</li>
+					<li><a href="portfolio.html"><i class="fas fa-brush"></i> Portfolio</a>
+					</li>
+					<li><a href="photography.html"><i class="fas fa-camera"></i> Photography</a>
+					</li>
+					<li><a href="contact.html"><i class="fas fa-id-card"></i> Contact</a>
+					</li>
+				</ul>
+			</div>
+        </div>
+
+        <div class="header">
+			<h1>contact</h1>
+		</div>
+
+		<div class="form">
+
+			<div class="formText">
+			If you would like to contact me about a price quote, or to 
+			have a talk about my services as a web developer, 
+			please feel free to email me below. alternatively, 
+			you can call or text.<br><br>Thank you!
+			</div>
+
+			<form method="POST" action="https://formspree.io/f/xqkgvozz">
+
+				<div class="formGroup">
+					<div>
+					<label for="firstName" class="text">First Name</label>
+					</div>
+					<input type="text" id="firstName" name="firstName">
+				</div>
+
+				<div class="formGroup">
+					<div>
+					<label for="lastName" class="text">Last Name</label>
+					</div>
+					<input type="text" id="lastName" name="lastname">
+				</div>
+
+				<div class="formGroup">
+					<div>
+					<label for="email" class="text">Email</label>
+					</div>
+					<input type="email" id="email" name="email">
+				</div>
+
+				<div class="formGroup">
+					<div>
+					<label for="message" class="text">Message</label>
+					</div>
+
+					<div>
+					</div>
+
+					<textarea name="message" id="message" cols="10" rows="5"></textarea>
+				</div>
+
+				<button type="submit">Send</button>
+
+			</form>
+		</div>
+
+        <div class="contact">
+			<div class="contactInfo" id="appear1"> 
+			<i class="fas fa-envelope">
+            </i> 
+			<p>E-mail :
+			<br>clearwebdesign@protonmail.com</p>
+			</div>
+			
+			<div class="contactInfo" id="appear2"> 
+			<i class="fas fa-phone"></i>
+			<p>Mobile:
+			<br>07546852886</p>
+			</div>
+
+			<div class="contactInfo" id="appear3"> 
+			<i class="fas fa-map-marked-alt"></i>
+			<p>Address:
+			<br>Kingsmill, Malton, YO17 7DS</p>
+			</div>
+
+			<div class="contactInfo">
+
+			<div class="clock" id="appear4"> 
+			<i class="fas fa-clock"></i>
+			<p>Opening Times:
+			<br>Mon - Fri
+			<br>9am - 6pm</p>
+			</div>
+
+			</div>
+			
+		
+		</div>
+
+</body>
+
+</html>
